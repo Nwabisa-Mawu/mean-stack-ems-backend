@@ -2,7 +2,7 @@ import * as dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import { connectToDatabase } from "./database";
-import employeeRouter from "./employee.routes";
+import employeeRouter from "./route-endpoints/employee.routes";
 
 dotenv.config();
 

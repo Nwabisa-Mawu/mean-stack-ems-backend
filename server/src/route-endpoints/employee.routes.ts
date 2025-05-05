@@ -1,6 +1,6 @@
 import * as express from "express";
 import { ObjectId } from "mongodb";
-import { EmployeeModel } from "./database";
+import { EmployeeModel } from "../models/employee.model";
 
 //GET
 const employeeRouter = express.Router();
