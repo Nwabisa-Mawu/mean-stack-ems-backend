@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import { connectToDatabase } from "./database";
 import employeeRouter from "./route-endpoints/employee.routes";
+import authRouter from "./route-endpoints/authRoutes.routes";
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ connectToDatabase(ATLAS_URI).then(() => {
   app.use(express.json());
 
   app.use("/api/employees", employeeRouter);
+  app.use('/api/auth', authRouter);
 
   app.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
